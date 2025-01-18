@@ -1,22 +1,28 @@
 <script setup lang="ts">
 import { TresCanvas } from '@tresjs/core'
 import { OrbitControls } from '@tresjs/cientos'
+
+import TheRobot from './components/TheRobot.vue';
 </script>
 
 <template>
   <TresCanvas
   clear-color="#82DBC5"
   window-size
+  shadows alpha
   >
   <TresPerspectiveCamera
-  :position="[3, 3, 3]"
+  :position="[6, 6, 6]"
   :look-at="[0, 0, 0]"
   />
   <OrbitControls />
-    <TresMesh>
+  <Suspense>
+        <TheRobot />
+    </Suspense>
+    <!-- <TresMesh>
       <TresBoxGeometry :args="[1, 1, 1]" />
       <TresMeshBasicMaterial color="orange" />
-    </TresMesh>
+    </TresMesh> -->
     <TresAmbientLight :intensity="1" />
   </TresCanvas>
 </template>
