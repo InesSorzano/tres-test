@@ -12,7 +12,7 @@ import TheRobot from './components/TheRobot.vue';
   shadows alpha
   >
   <TresPerspectiveCamera
-  :position="[6, 6, 6]"
+  :position="[5, 5, 8]"
   :look-at="[0, 0, 0]"
   />
   <OrbitControls />
