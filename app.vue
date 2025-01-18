@@ -23,7 +23,7 @@ import TheRobot from './components/TheRobot.vue';
       <TresBoxGeometry :args="[1, 1, 1]" />
       <TresMeshBasicMaterial color="orange" />
     </TresMesh> -->
-    <TresAmbientLight :intensity="1" />
+    <TresAmbientLight :intensity="5" />
   </TresCanvas>
 </template>
 
