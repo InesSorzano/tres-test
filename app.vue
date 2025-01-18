@@ -1,0 +1,36 @@
+<script setup lang="ts">
+import { TresCanvas } from '@tresjs/core'
+import { OrbitControls } from '@tresjs/cientos'
+</script>
+
+<template>
+  <TresCanvas
+  clear-color="#82DBC5"
+  window-size
+  >
+  <TresPerspectiveCamera
+  :position="[3, 3, 3]"
+  :look-at="[0, 0, 0]"
+  />
+  <OrbitControls />
+    <TresMesh>
+      <TresBoxGeometry :args="[1, 1, 1]" />
+      <TresMeshBasicMaterial color="orange" />
+    </TresMesh>
+    <TresAmbientLight :intensity="1" />
+  </TresCanvas>
+</template>
+
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+#app {
+  height: 100%;
+  width: 100%;
+}
+</style>
