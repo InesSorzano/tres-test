@@ -19,10 +19,10 @@ import TheRobot from './components/TheRobot.vue';
   <Suspense>
         <TheRobot />
     </Suspense>
-    <!-- <TresMesh>
-      <TresBoxGeometry :args="[1, 1, 1]" />
-      <TresMeshBasicMaterial color="orange" />
-    </TresMesh> -->
+    <TresMesh :rotation="[-Math.PI / 2, 0, 0]">
+      <TresPlaneGeometry :args="[4, 4]" />
+      <TresMeshBasicMaterial color="#444" />
+    </TresMesh>
     <TresAmbientLight :intensity="5" />
   </TresCanvas>
 </template>
